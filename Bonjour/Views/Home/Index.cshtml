@@ -10,10 +10,21 @@
     <label>First Name</label>
     <input type="text" name="firstName" value="@ViewBag.Firstname" />
     </br>
-    <label>Last Name</label>
-    <input type="text" name="lastName" />
+    
+    </br>
+
+
+    <label>Language</label>
+    <select>
+        <option value="Hello" selected>English</option>
+        <option value="Yasou">Greek</option>
+        <option value="Namaste">Hindi</option>
+        <option value="Guten tag">German</option>
+        <option value="Hola">Spanish</option>
+        <option value="Bonjour">French</option>
+    </select>
+
     <button type="submit">Submit</button>
-        
 </form>
 
 <p>@ViewBag.Firstname</p>

@@ -15,14 +15,22 @@ namespace Bonjour.Controllers
         //    return View();
         //}
 
-        
-        public IActionResult Index(string firstName, string lastName)
+
+        public IActionResult Index(string firstName)
         {
             ViewBag.Firstname = firstName;
-            ViewBag.Lastname = lastName;
+            //ViewBag.Lastname = lastName;
             return View();
         }
-       
+
+        //public IActionResult CreateMessage(string firstName)
+        //{
+        //    ViewBag.Firstname = firstName;
+
+        //    return View();
+
+        //}
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
