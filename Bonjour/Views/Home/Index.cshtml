@@ -1,18 +1,15 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿
+
+@{
+    Layout = null;
+
 }
-
-<p></p>
-
 
 <form method="post">
 
     <label>First Name</label>
     <input type="text" name="firstName" value="@ViewBag.Firstname" />
-    </br>
-    
-    </br>
-
+    &nbsp;&nbsp;
 
     <label>Language</label>
     <select>
@@ -24,9 +21,14 @@
         <option value="Bonjour">French</option>
     </select>
 
-    <button type="submit">Submit</button>
+    &nbsp; &nbsp;
+
+    <button type="submit">Get Greeting</button>
 </form>
+</br>
+</br>
 
-<p>@ViewBag.Firstname</p>
 
 
+<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Greeting:</strong></label>
+<p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> @ViewBag.Firstname</p>
