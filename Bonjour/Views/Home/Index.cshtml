@@ -1,16 +1,27 @@
 ﻿
-
+@* cancel out existing layout formatting *@
 @{
     Layout = null;
 
 }
 
-<form method="post">
+@* title of program on browsertab *@
+<title>Bonjour!</title>
 
+
+<h1 style="font-weight:600">Bonjour!</h1>
+
+
+<form method="post">
+    
+    @* entry box for text name *@
     <label>First Name</label>
     <input type="text" name="firstName" value="@ViewBag.Firstname" />
+   
+    @* spaces for formatting *@
     &nbsp;&nbsp;
 
+    @* drop down menu with language choices *@
     <label>Language</label>
     <select name="language">
         <option value="English" selected>English</option>
@@ -23,12 +34,15 @@
 
     &nbsp; &nbsp;
 
+    @* button inside form to submit elements of form *@
     <button type="submit">Get Greeting</button>
 </form>
+
+@* line breaks for formatting *@
 </br>
 </br>
 
 
-
-<label style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Greeting:</strong></label>
-<p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> @ViewBag.greeting</p>
+@* label for return greeting and return greeting in chosen language with entered name, with some html formatting *@
+<label style="font-size: x-large; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><strong>Greeting:</strong></label>
+<p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"><em> @ViewBag.greeting</em></p>
