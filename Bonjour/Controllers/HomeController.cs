@@ -17,6 +17,8 @@ namespace Bonjour.Controllers
         }
 
         //[HttpPost]
+        //[Route("/greet")]
+
         //public static string CreateMessage(string value, string firstName)
         //{
             
