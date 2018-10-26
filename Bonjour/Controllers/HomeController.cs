@@ -7,24 +7,57 @@ namespace Bonjour.Controllers
     public class HomeController : Controller
     {
         
-        
-        public IActionResult Index(string firstName)
+        [HttpGet]
+        public IActionResult Index()
         {
-            
-            ViewBag.Firstname = firstName;
 
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(string language, string firstName)
+        {
+            ViewBag.Firstname = firstName;
+            ViewBag.greeting = CreateMessage(language, firstName);
             return View();
         }
 
         //[HttpPost]
         //[Route("/greet")]
 
-        //public static string CreateMessage(string value, string firstName)
-        //{
+        public static string CreateMessage(string language, string firstName)
+        {
+            if (language == "English")
+            {
+                return $"Hello {firstName}!";
+            }
+            if (language == "Greek")
+            {
+                return $"Yasou {firstName}!";
+            }
+            if (language == "Hindi")
+            {
+                return $"Namaste {firstName}!";
+            }
+            if (language == "German")
+            {
+                return $"Guten tag {firstName}!";
+            }
+            if (language == "Spanish")
+            {
+                return $"¡Hola {firstName}!";
+            }
+            if (language == "French")
+            {
+                return $"Bonjour {firstName}!";
+            }
+
+
+            return "Invalid input";
             
 
-        //}
-        
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
